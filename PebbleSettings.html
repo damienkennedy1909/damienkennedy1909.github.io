@@ -80,9 +80,9 @@ but you must first sign up.					You can <a href="http://www.wunderground.com/wea
 				<fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
 					<legend>Temperature Scale:</LEGEND>                 
 					<input name="weather-scale" class="custom" id="radioF" type="radio" value="F">   
-             		<label for="radioF">°Fahrenheit</LABEL>
+             		<label for="radioF">Â°Fahrenheit</LABEL>
 					<input name="weather-scale" class="custom" id="radioC" type="radio" value="C">          
-					<label for="radioC">°Celsius</LABEL>				 </FIELDSET></DIV>
+					<label for="radioC">Â°Celsius</LABEL>				 </FIELDSET></DIV>
 
 			<div data-role="fieldcontain">
 				<label for="flipbattery">Display Battery:</LABEL>  
@@ -129,7 +129,7 @@ but you must first sign up.					You can <a href="http://www.wunderground.com/wea
 		function saveOptions() {
 			return {
 				'service':    $("#radioyahoo").is(':checked') ? 'yahoo' : $("#radioopen").is(':checked') ? 'open' : 'wundr',
-				'color':      $("#radiogreen").is(':checked') ? 'green' :$("#radiopurple").is(':checked') ? 'purple' :$("#radioduke").is(':checked') ? 'duke' : $("#radioblack").is(':checked') ? 'black' : 'red',
+				'color':      $("#radiogreen").is(':checked') ? 'green' : $("#radiopurple").is(':checked') ? 'purple' : $("#radioduke").is(':checked') ? 'duke' : $("#radioblack").is(':checked') ? 'black' : 'red',
 				'scale':      $("#radioF").is(':checked')     ? 'F' : 'C',
 				'battery':    $("select[name=flipbattery]").prop('selectedIndex') ? 'on' : 'off',
 				'bluetooth':  $("select[name=flipbluetooth]").prop('selectedIndex') ? 'on' : 'off',
