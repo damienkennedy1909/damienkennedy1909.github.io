@@ -127,7 +127,7 @@ but you must first sign up.					You can <a href="http://www.wunderground.com/wea
 		function saveOptions() {
 			return {
 				'service':    $("#radioyahoo").is(':checked') ? 'yahoo' : $("#radioopen").is(':checked') ? 'open' : 'wundr',
-				'color':      $("#radioduke").is(':checked') ? 'duke' : $("#radioblack").is(':checked') ? 'black' : 'red',
+				'color':      $("#radiogreen").is(':checked') ? 'green' : $("#radioduke").is(':checked') ? 'duke' : $("#radioblack").is(':checked') ? 'black' : 'red',
 				'scale':      $("#radioF").is(':checked')     ? 'F' : 'C',
 				'battery':    $("select[name=flipbattery]").prop('selectedIndex') ? 'on' : 'off',
 				'bluetooth':  $("select[name=flipbluetooth]").prop('selectedIndex') ? 'on' : 'off',
