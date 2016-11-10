@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <!DOCTYPE html PUBLIC "" "">
 
-<HTML>
+is<HTML>
 
 <HEAD>
 
@@ -46,7 +46,10 @@ Weather Map</LABEL>
 					<input name="bg-color" class="custom" id="radioduke"   type="radio" value="duke">
 						<label for="radioduke">Duke Blue</LABEL>
 					<input name="bg-color" class="custom" id="radiogreen"   type="radio" value="green">
-						<label for="radiogreen">Green</LABEL>						
+						<label for="radiogreen">Green</LABEL>
+					<input name="bg-color" class="custom" id="radiopurple" type="radio" value="purple">
+						<label for="radiopurple">Purple</LABEL>
+L							
 					<input name="bg-color" class="custom" id="radioblack"    type="radio" value="black">
 						<label for="radioblack">Black</LABEL>
 					<input name="bg-color" class="custom" id="radiored"  type="radio" value="red">
@@ -127,7 +130,7 @@ but you must first sign up.					You can <a href="http://www.wunderground.com/wea
 		function saveOptions() {
 			return {
 				'service':    $("#radioyahoo").is(':checked') ? 'yahoo' : $("#radioopen").is(':checked') ? 'open' : 'wundr',
-				'color':      $("#radiogreen").is(':checked') ? 'green' : $("#radioduke").is(':checked') ? 'duke' : $("#radioblack").is(':checked') ? 'black' : 'red',
+				'color':      $("radiopurple").is(':checked') ? 'purple' : $("#radiogreen").is(':checked') ? 'green' : $("#radioduke").is(':checked') ? 'duke' : $("#radioblack").is(':checked') ? 'black' : 'red',
 				'scale':      $("#radioF").is(':checked')     ? 'F' : 'C',
 				'battery':    $("select[name=flipbattery]").prop('selectedIndex') ? 'on' : 'off',
 				'bluetooth':  $("select[name=flipbluetooth]").prop('selectedIndex') ? 'on' : 'off',
@@ -201,6 +204,8 @@ but you must first sign up.					You can <a href="http://www.wunderground.com/wea
 				$("#radioblack").attr("checked", "checked");
 			} else if (color === 'green') {
 				$("#radiogreen").attr("checked","checked");
+			} else if (color === 'purple) {
+				$("radiopurple").attr("checked","checked");
 			} else {
 				$("#radiored").attr("checked", "checked");
 			}
