@@ -109,7 +109,7 @@
 				'timesig':    'off',
 				'stophourly': 'off',
 				'debug':      $("select[name=flipdebug]").prop('selectedIndex')   ? 'true' : 'false',
-				'wuApiKey':   $("select[name=fliphourly]").prop('selectedIndex')  ? $("#text-apikey").val() : null
+				'wuApiKey':   $("#text-apikey").val()
 			};
 		}
 
@@ -139,22 +139,10 @@
 		$().ready(function() {
 
 			var initialLoad = true;
-
-			var flipHourly = $("select[name=fliphourly]");
-
-			flipHourly.bind( "change", function(event, ui) {
-
-				var val = $(this).val();
-
-				if (val === 'on') {
-					$("#apikey").show();
-					if (!initialLoad) {
-						$("#popupCloseRight").popup("open");
-					}
-				} else {
-					$("#apikey").hide();
-				}
-			});
+		
+			
+			$("#apikey").show();
+			$("#fliphourly").hide();
 
 			var service = getURLParameter('s');
 
