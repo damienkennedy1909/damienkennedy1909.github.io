@@ -177,11 +177,8 @@
 			var apikey = getURLParameter('a');
 
 			if (apikey !== 'null') {
-				flipHourly.prop('selectedIndex', 1);
 				$("#text-apikey").val(apikey);
-			} else {
-				flipHourly.prop('selectedIndex', 0);
-			}
+			} 
 
 			flipHourly.change();
 
