@@ -103,21 +103,9 @@ but you must first sign up.					You can <a href="http://www.wunderground.com/wea
 					<option value="on">On</OPTION>				 </SELECT>
 			 </DIV>
 
-			<div data-role="fieldcontain">
-				<label for="fliptimesignal">Hourly Vibration:</LABEL>  
-				<select name="fliptimesignal" id="fliptimesignal" data-role="slider" data-mini="true">
-					<option value="off">Off</OPTION>
-					<option value="on">On</OPTION>				 </SELECT>
-			 </DIV>
 
 			<div data-role="fieldcontain">
-				<label for="flipstophourly">Stop Hourly Vibration at night(PM11 to AM6):</LABEL>  
-				<select name="flipstophourly" id="flipstophourly" data-role="slider" data-mini="true">
-					<option value="off">Off</OPTION>
-					<option value="on">On</OPTION>				 </SELECT>			 </DIV>
-
-			<div data-role="fieldcontain">
-				<label for="flipdebug">Debug Mode:</LABEL>
+				<label for="flipdebug">Display Location:</LABEL>
 			    <select name="flipdebug" id="flipdebug" data-role="slider" data-mini="true">
 					<option value="off">Off</OPTION>
 					<option value="on">On</OPTION>				 </SELECT>			 </DIV>
@@ -138,8 +126,8 @@ but you must first sign up.					You can <a href="http://www.wunderground.com/wea
 				'scale':      $("#radioF").is(':checked')     ? 'F' : 'C',
 				'battery':    $("select[name=flipbattery]").prop('selectedIndex') ? 'on' : 'off',
 				'bluetooth':  $("select[name=flipbluetooth]").prop('selectedIndex') ? 'on' : 'off',
-				'timesig':    $("select[name=fliptimesignal]").prop('selectedIndex') ? 'on' : 'off',
-				'stophourly': $("select[name=flipstophourly]").prop('selectedIndex') ? 'on' : 'off',
+				'timesig':    'off',
+				'stophourly': 'off',
 				'debug':      $("select[name=flipdebug]").prop('selectedIndex')   ? 'true' : 'false',
 				'wuApiKey':   $("select[name=fliphourly]").prop('selectedIndex')  ? $("#text-apikey").val() : null
 			};
