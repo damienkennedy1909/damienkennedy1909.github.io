@@ -48,12 +48,7 @@
 					<input name="bg-color" class="custom" id="radiored"  type="radio" value="red">
 						<label for="radiored">Red</LABEL>				 </FIELDSET></DIV>
 
-			<div data-role="fieldcontain">
-				<label for="fliphourly">Hourly Weather (requires key):</LABEL>
-				<select name="fliphourly" id="fliphourly" data-role="slider" data-mini="true">
-					<option value="off">Off</OPTION>
-					<option value="on">On</OPTION>				 </SELECT>
-			 </DIV>
+
 
 			<div id="apikey" data-role="fieldcontain" data-mini="true">
 				<div class="ui-field-contain">
@@ -142,7 +137,7 @@
 		
 			
 			$("#apikey").show();
-			$("#fliphourly").hide();
+		
 
 			var service = getURLParameter('s');
 
