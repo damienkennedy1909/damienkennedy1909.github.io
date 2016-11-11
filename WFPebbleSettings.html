@@ -30,17 +30,6 @@
 
 			<div data-role="fieldcontain">
 				<fieldset data-role="controlgroup" data-mini="true">
-					<legend>Weather Provider:</LEGEND>
-					<input name="weather-service" class="custom" id="radioyahoo"   type="radio" value="yahoo">
-						<label for="radioyahoo">YAHOO! Weather</LABEL>
-					<input name="weather-service" class="custom" id="radioopen"    type="radio" value="open">
-						<label for="radioopen">Open Weather Map</LABEL>
-					<input name="weather-service" class="custom" id="radiowundr"  type="radio" value="wundr">
-						<label for="radiowundr">Weather Undergroundp (API KEY required)</LABEL>
-				 </FIELDSET></DIV>
-
-			<div data-role="fieldcontain">
-				<fieldset data-role="controlgroup" data-mini="true">
 					<legend>Background color:</LEGEND>
 					<input name="bg-color" class="custom" id="radioduke"   type="radio" value="duke">
 						<label for="radioduke">Duke Blue</LABEL>
@@ -121,7 +110,7 @@ but you must first sign up.					You can <a href="http://www.wunderground.com/wea
 	<script>
 		function saveOptions() {
 			return {
-				'service':    $("#radioyahoo").is(':checked') ? 'yahoo' : $("#radioopen").is(':checked') ? 'open' : 'wundr',
+				'service':    'wundr',
 				'color':      $("#radioorange").is(':checked') ? 'orange' : $("#radioyellow").is(':checked') ? 'yellow' : $("#radiowhite").is(':checked') ? 'white' : $("#radiogreen").is(':checked') ? 'green' : $("#radiopurple").is(':checked') ? 'purple' : $("#radioduke").is(':checked') ? 'duke' : $("#radioblack").is(':checked') ? 'black' : 'red',
 				'scale':      $("#radioF").is(':checked')     ? 'F' : 'C',
 				'battery':    $("select[name=flipbattery]").prop('selectedIndex') ? 'on' : 'off',
@@ -178,16 +167,7 @@ but you must first sign up.					You can <a href="http://www.wunderground.com/wea
 
 			var service = getURLParameter('s');
 
-			if (service === 'open') {
-				$("#radioopen").attr("checked", "checked");
-			} else if (service === 'yahoo') {
-				$("#radioyahoo").attr("checked", "checked");
-			} else {
-				$("#radiowundr").attr("checked", "checked");
-			}
-
-			$("input[name='weather-service']").checkboxradio("refresh");
-
+		
 			var color = getURLParameter('c');
 
 			if (color === 'duke') {
